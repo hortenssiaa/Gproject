@@ -1,4 +1,4 @@
-package com.example.multipage;
+package com.example.justtest;
 
 import android.os.Bundle;
 
