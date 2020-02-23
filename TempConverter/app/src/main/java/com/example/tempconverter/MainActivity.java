@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        radioGroup = (RadioGroup) findViewById(R.id.group);
+        radioGroup = (RadioGroup) findViewById(R.id.group); //이렇게 정의를 해줘야 뭐가뭔지 읽어오니깐
         radioButton1 = (RadioButton) findViewById(R.id.radio1);
         radioButton2 = (RadioButton) findViewById(R.id.radio2);
         button = (Button) findViewById(R.id.converter_button);
