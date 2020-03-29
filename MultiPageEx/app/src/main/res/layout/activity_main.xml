@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/sunflower"
+    android:orientation="vertical"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <TextView
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/introButton"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:text="Introduction"
+        android:gravity="center"
+        android:background="#D500F9"/>
+
+    <Button
+        android:id="@+id/settingButton"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:text="Settings"
+        android:gravity="center"
+        android:background="#D500F9"/>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="192dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:text="Start"
+        android:gravity="center"
+        android:background="#D500F9"/>
+    </LinearLayout>
+
+</LinearLayout>

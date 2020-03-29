@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/edittext1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/b_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="입력완료"/>
+
+        <Button
+            android:id="@+id/b_canceled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="취소"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>
