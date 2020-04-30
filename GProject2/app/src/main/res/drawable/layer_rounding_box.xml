@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid
+        android:color="#40FFFFFF" />
+
+    <padding
+        android:left="45px"
+        android:top="15px"
+        android:right="45px"
+        android:bottom="15px" />
+
+    <corners
+        android:radius="30px" />
+</shape>
+
+<!--
+* 라운딩 박스 모형 *
+- 라운딩 박스는 shape 으로 지정
+- 도형에 색 지정 가 : color로
+- 이 도형의 라운딩은 corners를 통해 지정!
+-->

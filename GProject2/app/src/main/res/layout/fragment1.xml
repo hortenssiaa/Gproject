@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/fragment1">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="#7A63FF">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="330dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/layer_rounding_box_up"
+            android:gravity="left|center"
+            android:text="출발  |  "
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="330dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="108dp"
+            android:background="@drawable/layer_rounding_box_down"
+            android:gravity="left|center"
+            android:text="도착  |  "
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edittext_departure"
+            android:layout_width="251dp"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:hint="장소 또는 주소 검색"
+            android:singleLine="true"
+            android:textColor="#FFFFFFFF"
+            android:textColorHint="#75FFFFFF"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView1"
+            app:layout_constraintEnd_toEndOf="@+id/textView1"
+            app:layout_constraintTop_toTopOf="@+id/textView1"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/edittext_arrival"
+            android:layout_width="251dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:hint="장소 또는 주소 검색"
+            android:singleLine="true"
+            android:textColor="#FFFFFFFF"
+            android:textColorHint="#75FFFFFF"
+            android:textCursorDrawable="@drawable/text_cursor"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView1"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
