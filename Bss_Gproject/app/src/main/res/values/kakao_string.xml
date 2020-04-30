@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="kakao_app_key">44dd4b6c607d4c074d112e1fdf86e099</string>
+</resources>

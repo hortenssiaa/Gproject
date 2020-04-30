@@ -35,6 +35,8 @@ public class MainActivity extends AppCompatActivity
     Toolbar toolbar;
     ActionBar actionBar;
 
+    //Nav_1Listener nav1Listener;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,14 +49,19 @@ public class MainActivity extends AppCompatActivity
         drawerLayout = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        // Set the drawer toggle as the DrawerListener
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        
+
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
+
         actionBar = getSupportActionBar();
         actionBar.setDisplayShowCustomEnabled(true);
         actionBar.setDisplayShowTitleEnabled(false);//기본 제목을 없애줍니다.
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        //nav1Listener = new Nav_1Listener(); //안에 view뭐로 채워야됨???
 
         mapActivity = new MapActivity();
         fragment1 = new Fragment1();
@@ -67,6 +74,7 @@ public class MainActivity extends AppCompatActivity
         fragment4 = new Fragment4();
 
         getSupportFragmentManager().beginTransaction().add(R.id.container, mapActivity).commit();
+        //Main화면인, R.id.container부분에 mapActivity xml 화면 보여줌
     }
 
     @Override
@@ -109,29 +117,13 @@ public class MainActivity extends AppCompatActivity
     @Override
     public void onFragmentSelected(int position, Bundle bundle) {
         Fragment curFragment = null;
-        ActionBar actionBar;
 
         if (position == 0) {
             curFragment = fragment1;
             requestWindowFeature(Window.FEATURE_NO_TITLE);
         } else if (position == 1) {
             curFragment = fragment2_1;
-            toolbar.setTitle((CharSequence) findViewById(R.id.fg2_1_titleText));
-
-
-            toolbar = findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
-
-            drawerLayout = findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawerLayout.addDrawerListener(toggle);
-
-            toggle.syncState();
-            actionBar = getSupportActionBar();
-            actionBar.setDisplayShowCustomEnabled(true);
-            actionBar.setDisplayShowTitleEnabled(false);//기본 제목을 없애줍니다.
-            actionBar.setDisplayHomeAsUpEnabled(true);
+            toolbar.setTitle("두번째, 전체보기 화면");
         } else if (position == 2) {
             curFragment = fragment2_2;
             toolbar.setTitle((CharSequence) findViewById(R.id.fg2_2_titleText));
@@ -147,7 +139,7 @@ public class MainActivity extends AppCompatActivity
         } else if (position == 6) {
             curFragment = fragment3;
             toolbar.setTitle((CharSequence) findViewById(R.id.fg3_titleText)); // 이 방식 안되면
-        } else if (position == 4) {
+        } else if (position == 7) {
             curFragment = fragment4;
             toolbar.setTitle("실시간 운동인증"); // 이 방식으로!!!!
             toolbar.setTitleTextColor(Integer.parseInt("#FFFFFFFF"));
@@ -158,7 +150,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.actionbar_menu, menu);
+        getMenuInflater().inflate(R.menu.actionbar_menu, menu); //actionbar_menu에 search 검색기능 있음
         return true;
     }
 

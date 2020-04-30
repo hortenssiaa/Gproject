@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <item
         android:id="@+id/menu_search"
-        android:title="검색"
-        android:icon="@android:drawable/ic_menu_search"
-        app:showAsAction="always"
-        app:actionLayout="@layout/fragment2_1"/>
+        android:title="설정아이콘"
+        android:icon="@drawable/ic_search"
+        android:iconTint="#FFFFFF"
+        app:showAsAction="always" />
 </menu>
+
+<!--
+
+        app:actionLayout="@layout/"
+        이렇게하면, 이 item을 layout~에 적용하라 임!
+
+-->

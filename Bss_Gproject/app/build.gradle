@@ -1,6 +1,8 @@
 apply plugin: 'com.android.application'
 
+
 android {
+    viewBinding.enabled = true
     packagingOptions {
         exclude "lib/arm64-v8a/librealm-jni.so"
     }

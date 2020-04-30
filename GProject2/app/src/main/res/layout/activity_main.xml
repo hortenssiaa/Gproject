@@ -8,7 +8,8 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    tools:context=".activities.MainActivity"> <!--fitsSystemWindows 옵션을 true로 설정할 시 NavigationView가 toolbar 부분을 덮고 Open된다.-->
+    tools:context=".activities.MainActivity">
+    <!--fitsSystemWindows 옵션을 true로 설정할 시 NavigationView가 toolbar 부분을 덮고 Open된다.-->
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -33,7 +34,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
         </FrameLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
