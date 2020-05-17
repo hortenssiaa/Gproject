@@ -6,16 +6,11 @@
     android:layout_height="match_parent"
     android:id="@+id/fragment2_1">
 
-    <androidx.appcompat.widget.Toolbar
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/fg2_1_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorLightPurple"
-        android:elevation="1dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-        <TextView
+<!--
+
+<TextView
             android:id="@+id/fg2_1_titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,5 +19,4 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"/>
 
-    </androidx.appcompat.widget.Toolbar>
-</androidx.constraintlayout.widget.ConstraintLayout>
+-->

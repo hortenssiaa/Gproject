@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     android:id="@+id/fragment2_4">
 
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--
+
+
     <androidx.appcompat.widget.Toolbar
         app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/toolbar"
@@ -25,4 +30,5 @@
             android:textStyle="bold"/>
 
     </androidx.appcompat.widget.Toolbar>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+-->

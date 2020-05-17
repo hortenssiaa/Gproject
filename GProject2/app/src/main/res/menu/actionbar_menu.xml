@@ -4,7 +4,7 @@
     <item
         android:id="@+id/menu_search"
         android:title="설정아이콘"
-        android:icon="@drawable/ic_search"
+        android:icon="@android:drawable/ic_menu_search"
         android:iconTint="#FFFFFF"
         app:showAsAction="always" />
 </menu>
