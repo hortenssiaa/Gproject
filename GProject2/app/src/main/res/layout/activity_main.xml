@@ -29,12 +29,18 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-                <FrameLayout android:id="@+id/container"
-                   android:layout_width="match_parent"
-                   android:layout_height="match_parent"
-                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <FrameLayout android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+              <!--
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                    -->
 
-                </FrameLayout>
+        </FrameLayout>
 <!--
 이게 여기나, FrameLayout 바로 위로 올라가면, 겹쳐 보이는데, Framely 바로밑으로 나가면 이것만 보임
                     fragment 선언하고, 필요할때만 갖다 쓰면 안되나?

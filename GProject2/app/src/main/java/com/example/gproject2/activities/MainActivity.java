@@ -6,8 +6,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.gproject2.R;
 import com.example.gproject2.interfaces.FragmentCallback;
@@ -121,10 +123,42 @@ public class MainActivity extends AppCompatActivity
         fragment2_5 = new Fragment2_5();
         fragment3 = new Fragment3();
         fragment4 = new Fragment4();
+        /*
+        ArrayList<Lists> items = new ArrayList<>();
+        recyclerV = findViewById(R.id.fake_recyclerView); // R.id.recyclerView
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(realSignInActivity, LinearLayoutManager.VERTICAL, false);
+        recyclerV.setLayoutManager(layoutManager);
+        //recyclerV.setLayoutManager(new LinearLayoutManager(this));
+        adapter = new LinksAdapter(items);
+        recyclerV.setAdapter(adapter);
+
+        //GridLayoutManager layoutManager = new GridLayoutManager(this, 1);
+        //recyclerView.setLayoutManager(layoutManager);
+        //adapter = new LinksAdapter();
+
+        iv_cardPhoto = (ImageView) findViewById(R.id.imageview_cardV);
+
+        adapter.addItem(new Lists(R.drawable.ic_launcher_round, "양재 시민의 숲", "도시근린공원", "서울 서초구 양재 236", "연중무휴",
+                "02-575-3895"));
+        adapter.addItem(new Lists(R.drawable.ic_launcher_round,"양재천", "강/하천", "서울 강남구 도곡동", "",
+                ""));
+
+        recyclerV.setAdapter(adapter);
+        adapter.setOnItemClickListener(new OnListsItemClickListener() {
+            @Override
+            public void onItemClick(LinksAdapter.ViewHolder holder, View view, int position) {
+                Lists item = adapter.getItem(position);
+                Toast.makeText(getApplicationContext(), "장소 선택됨: " + item.getName(),
+                        Toast.LENGTH_LONG).show();
+            }
+        });
+        recyclerV.setHasFixedSize(true);
+
+         */
 
         getSupportFragmentManager().beginTransaction().add(R.id.container, mapActivity).commit();
         //Main화면인, R.id.container부분에(activity_main.xml에 있음) mapActivity xml 화면 보여줌
-
     }
 
     public void signinBt_onClick(View view){
@@ -171,6 +205,41 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    public void cardview_onClick(View view) { // 리사이클러뷰 리스트 클릭시 이동 2-5꺼
+        switch (view.getId()) {
+            case R.id.imageview_cardV:
+
+            case R.id.textView_card2:
+
+            case R.id.textView_card1:
+
+            case R.id.textView_card3:
+
+            case R.id.textView_card4:
+
+            case R.id.textView_card5:
+                onFragmentChanged(11);
+                break;
+        }
+    }
+    public void cardview_onClick3(View view) { // 리사이클러뷰 리스트 클릭시 이동 3꺼
+        switch (view.getId()) {
+            case R.id.imageview3_cardV:
+
+            case R.id.textView3_card2:
+
+            case R.id.textView3_card1:
+
+            case R.id.textView3_card3:
+
+            case R.id.textView3_card4:
+
+            case R.id.textView3_card5:
+                onFragmentChanged(12);
+                break;
+        }
+    }
+
     public void headerTVonClick(View view){ //Sign in 해주세요 Text view 부분 onClick
         switch (view.getId()) {
             case R.id.signin_Textview:
@@ -198,7 +267,6 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem menuItem) {
         int id = menuItem.getItemId();
 
-        //nav_2, My 플레이스 클릭시 아무 반응 없게 하는것 - 지금 상태 괜찮나?
         if (id == R.id.nav_home) { //메인 지도
             onFragmentSelected(8, null);
         } else if (id == R.id.nav_1) { // 길찾기
@@ -313,6 +381,31 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fg_naverSignUp).commit();
         } else if (index == 10) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fg_emailSignUp).commit();
+        } else if (index == 11) { // go to Ricycler View - 그룹 전체보기
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2_5).commit();
+        } else if (index == 12) { // go to Ricycler View - 그룹 전체보기
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3).commit();
         }
     }
+
+    /* onFragmntChanged 의 다른 방법
+    private void onFragmntChanged(Fragment newFragment) {
+       FragmentTransaction trasection = getFragmentManager().beginTransaction();
+
+        if(!newFragment.isAdded()) {
+            try {
+                //FragmentTransaction trasection =
+                getFragmentManager().beginTransaction();
+                trasection.replace(R.id.linearLayout2, newFragment);
+                trasection.addToBackStack(null);
+                trasection.commit();
+            } catch (Exception e) {
+                // TODO: handle exception
+                // AppConstants.printLog(e.getMessage());
+            } else {
+                trasection.show(newFragment);
+            }
+        }
+    }
+     */
 }

@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.gproject2.R;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class RealSignInActivity extends AppCompatActivity {
     Button fbsi_button;
@@ -15,6 +17,7 @@ public class RealSignInActivity extends AppCompatActivity {
     Button naversi_button;
     Button emailsi_button;
     Button signup_buttion;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
