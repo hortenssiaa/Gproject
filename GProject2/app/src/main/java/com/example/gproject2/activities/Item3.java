@@ -6,17 +6,17 @@ public class Item3 {
     String title;
     String category;
     String address;
-    String state;
-    String phone;
+    String time;
+    String day;
 
-    public Item3 (int id, int image, String title, String category, String address, String state, String phone) {
+    public Item3 (int id, int image, String title, String category, String address, String time, String day) {
         this.id = id;
         this.image = image;
         this.title = title;
         this.category = category;
         this.address = address;
-        this.state = state;
-        this.phone = phone;
+        this.time = time;
+        this.day = day;
     }
 
     public int getId() {
@@ -59,20 +59,19 @@ public class Item3 {
         this.address = address;
     }
 
-    public String getState() {
-        return state;
+    public String getTime() {
+        return time;
     }
 
-    public void setState(String state) {
-        this.state = state;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getDay() {
+        return day;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setDay(String day) {
+        this.day = day;
     }
-
 }

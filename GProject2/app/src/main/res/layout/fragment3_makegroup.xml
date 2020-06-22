@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="1dp"
+    android:background="#FFFFFFFF"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="그룹 이름"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:textColor="#FF000000"
+            android:textSize="21sp"
+            android:layout_marginBottom="10dp"/>
+
+        <EditText
+            android:id="@+id/textview_groupname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="그룹 이름을 입력해주세요"
+            android:padding="8dip"
+            android:background="@drawable/edittextbox"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="종목"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:textColor="#FF000000"
+            android:textSize="21sp"
+            android:layout_marginBottom="10dp"/>
+
+        <Spinner
+            android:id="@+id/makegroup_spinner"
+            android:entries="@array/선택안함"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dip"
+            android:background="@drawable/edittextbox"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="위치"
+            android:gravity="left"
+            android:textStyle="bold"
+            android:textColor="#FF000000"
+            android:textSize="21sp"
+            android:layout_marginBottom="10dp"/>
+
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/makegroup_radioB1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:text="주소 직접입력"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/makegroup_radioB2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="지도에서 선택"
+                android:layout_marginLeft="30dp"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/textview_groupaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="주소를 입력해주세요"
+            android:padding="8dip"
+            android:background="@drawable/edittextbox"
+            android:layout_marginRight="30dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="30dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:gravity="left"
+                android:textStyle="bold"
+                android:textColor="#FF000000"
+                android:textSize="21sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예) 19:00 - 20:00"
+                android:gravity="left"
+                android:textSize="15sp"
+                android:padding="3dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/makegroup_showtimeday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"
+            android:text="시간, 요일"
+            android:layout_marginBottom="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textview_grouptime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="시작시간"
+                android:padding="8dip"
+                android:background="@drawable/edittextbox"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⎯"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"/>
+
+            <EditText
+                android:id="@+id/textview_grouptime2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="시작시간"
+                android:padding="8dip"
+                android:background="@drawable/edittextbox"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="|"
+                android:textSize="30sp"
+                android:layout_gravity="center"
+                android:layout_marginRight="15dp"/>
+
+            <Spinner
+                android:id="@+id/makegroup_spinner2"
+                android:entries="@array/요일"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dip"
+                android:background="@drawable/edittextbox"
+                android:layout_marginRight="10dp"/>
+
+            <ImageButton
+                android:id="@+id/makegroup_addbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFFFF"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_add"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/makegroup_save"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/roundbutton"
+            android:text="등록하기"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/makegroup_close"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/roundbutton_gray"
+            android:text="닫기"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

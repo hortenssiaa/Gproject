@@ -88,11 +88,11 @@ public class Item3Adapter extends RecyclerView.Adapter<Item3Adapter.ViewHolder>
             // 뷰 객체에 들어있는 텍스트뷰 참조하기
             layout3_1 = itemView.findViewById(R.id.layout3_1);
             imageView = itemView.findViewById(R.id.imageview3_cardV);
-            textView1 = itemView.findViewById(R.id.textView3_card1);
-            textView2 = itemView.findViewById(R.id.textView3_card2);
-            textView3 = itemView.findViewById(R.id.textView3_card3);
-            textView4 = itemView.findViewById(R.id.textView3_card4);
-            textView5 = itemView.findViewById(R.id.textView3_card5);
+            textView1 = itemView.findViewById(R.id.textView3_card1); // 장소/그룹 이름
+            textView2 = itemView.findViewById(R.id.textView3_card2_1); // 종목
+            textView3 = itemView.findViewById(R.id.textView3_card3); // 주소
+            textView4 = itemView.findViewById(R.id.textView3_card4); // 시간
+            textView5 = itemView.findViewById(R.id.textView3_card5); // 요일
 
 
             textView1.setOnClickListener(new View.OnClickListener() {
@@ -113,8 +113,8 @@ public class Item3Adapter extends RecyclerView.Adapter<Item3Adapter.ViewHolder>
             textView1.setText(item.getTitle());
             textView2.setText(item.getCategory());
             textView3.setText(item.getAddress());
-            textView4.setText(item.getPhone());
-            textView5.setText(item.getState());
+            textView4.setText(item.getTime());
+            textView5.setText(item.getDay());
         }
 
         public void setLayoutType(int layoutType) {

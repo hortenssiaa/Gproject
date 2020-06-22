@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity
     Fragment2_4 fragment2_4;
     Fragment2_5 fragment2_5;
     Fragment3 fragment3;
+    Fragment3_makegroup fragment3_makegroup;
     Fragment4 fragment4;
 
     DrawerLayout drawerLayout;
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity
         fragment2_4 = new Fragment2_4();
         fragment2_5 = new Fragment2_5();
         fragment3 = new Fragment3();
+        fragment3_makegroup = new Fragment3_makegroup();
         fragment4 = new Fragment4();
         /*
         ArrayList<Lists> items = new ArrayList<>();
@@ -381,10 +383,12 @@ public class MainActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fg_naverSignUp).commit();
         } else if (index == 10) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fg_emailSignUp).commit();
-        } else if (index == 11) { // go to Ricycler View - 그룹 전체보기
+        } else if (index == 11) { // go to Ricycler View - My 운동그룹
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment2_5).commit();
         } else if (index == 12) { // go to Ricycler View - 그룹 전체보기
             getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3).commit();
+        } else if (index == 13) { // go to Ricycler View - 새로운 그룹 만들기
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment3_makegroup).commit();
         }
     }
 
